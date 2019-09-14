@@ -37,39 +37,9 @@ void init_target_properties(void)
 	/* get the bootloader string */
 	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
 
-	if (bootloader.find("J500FN") == 0) {
-		device = (char *)"j5nltexx";
-		model = (char *)"SM-J500FN";
-		set_lte_properties();
-	}
-	else if (bootloader.find("J500F") == 0) {
-		device = (char *)"j5ltexx";
-		model = (char *)"SM-J500F";
-		set_lte_properties();
-	}
-	else if (bootloader.find("J500H") == 0) {
-		device = (char *)"j53gxx";
-		model = (char *)"SM-J500H";
-		set_gsm_properties();
-	}
-	else if (bootloader.find("J500M") == 0) {
-		device = (char *)"j5lteub";
-		model = (char *)"SM-J500M";
-		set_lte_properties();
-	}
-	else if (bootloader.find("J500Y") == 0) {
-		device = (char *)"j5ylte";
-		model = (char *)"SM-J500Y";
-		set_lte_properties();
-	}
-	else if (bootloader.find("J500G") == 0) {
-		device = (char *)"j5ltedx";
-		model = (char *)"SM-J500G";
-		set_lte_properties();
-	}
-	else if (bootloader.find("J5008") == 0) {
-		device = (char *)"j5ltechn";
-		model = (char *)"SM-J5008";
+	if (bootloader.find("J320N0") == 0) {
+		device = (char *)"j3lte";
+		model = (char *)"SM-J320N0";
 		set_lte_properties();
 	}
 	else {
